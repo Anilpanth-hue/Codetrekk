@@ -1,79 +1,81 @@
-import Link from "next/link"
-import { Github, Twitter, Linkedin } from "lucide-react"
+"use client";
+import Link from "next/link";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="container flex flex-col gap-8 py-8 md:flex-row md:py-12">
-        <div className="flex-1 space-y-4">
-          <h2 className="font-bold">Amane Soft</h2>
-          <p className="text-sm text-muted-foreground">Pioneering software solutions for the digital age.</p>
+    <footer className="bg-background py-10 relative z-10">
+      <div className="container flex flex-col items-center justify-center space-y-8">
+        {/* Top navigation links */}
+        <div className="flex flex-wrap justify-center gap-8 text-sm">
+          <Link
+            href="/faq"
+            className="px-2 py-1 text-gray-400 hover:text-white transition-colors"
+          >
+            FAQ
+          </Link>
+          <Link
+            href="/support"
+            className="px-2 py-1 text-gray-400 hover:text-white transition-colors"
+          >
+            Support
+          </Link>
+          <Link
+            href="/privacy"
+            className="px-2 py-1 text-gray-400 hover:text-white transition-colors"
+          >
+            Privacy
+          </Link>
+          <Link
+            href="/timeline"
+            className="px-2 py-1 text-gray-400 hover:text-white transition-colors"
+          >
+            Timeline
+          </Link>
+          <Link
+            href="/terms"
+            className="px-2 py-1 text-gray-400 hover:text-white transition-colors"
+          >
+            Terms
+          </Link>
         </div>
-        <div className="grid flex-1 grid-cols-2 gap-12 sm:grid-cols-3">
-          <div className="space-y-4">
-            <h3 className="text-sm font-medium">Solutions</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/ai-analytics" className="text-muted-foreground transition-colors hover:text-primary">
-                  AI Analytics
-                </Link>
-              </li>
-              <li>
-                <Link href="/cloud-services" className="text-muted-foreground transition-colors hover:text-primary">
-                  Cloud Services
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-sm font-medium">Company</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/about" className="text-muted-foreground transition-colors hover:text-primary">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-muted-foreground transition-colors hover:text-primary">
-                  Careers
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-sm font-medium">Connect</h3>
-            <div className="flex space-x-4">
-              <Link
-                href="https://github.com/amanesoft"
-                className="text-muted-foreground transition-colors hover:text-primary"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                href="https://twitter.com/amanesoft"
-                className="text-muted-foreground transition-colors hover:text-primary"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="https://linkedin.com/company/amanesoft"
-                className="text-muted-foreground transition-colors hover:text-primary"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </div>
-          </div>
+
+        {/* Social media icons */}
+        <div className="flex justify-center space-x-6">
+          <Link
+            href="https://linkedin.com/anil-panth-b060a2256"
+            className="block rounded-md border border-gray-700 p-2 hover:border-gray-500 transition-colors"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
+          </Link>
+          <Link
+            href="https://x.com/AnilPanth6"
+            className="block rounded-md border border-gray-700 p-2 hover:border-gray-500 transition-colors"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Twitter className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
+          </Link>
+          <Link
+            href="https://instagram.com/codetrek"
+            className="block rounded-md border border-gray-700 p-2 hover:border-gray-500 transition-colors"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
+          </Link>
         </div>
-      </div>
-      <div className="container border-t py-6">
-        <p className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Amane Soft, Inc. All rights reserved.
-        </p>
+
+        {/* Copyright text */}
+        <div className="text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} CodeTrek, Inc. All rights reserved.
+        </div>
       </div>
     </footer>
-  )
+  );
 }
-

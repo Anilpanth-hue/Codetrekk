@@ -31,7 +31,7 @@ export default function CTA() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                Connect Your Accounts <ArrowRight className="ml-2 h-4 w-4" />
+                Get Your Trek Card <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 size="lg"

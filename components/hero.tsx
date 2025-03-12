@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
+import { ConnectModal } from "@/components/profile/connect-modal";
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative bg-gradient-to-b from-background to-background/80 container flex min-h-[calc(100vh-3.5rem)] max-w-screen-2xl flex-col items-center justify-center space-y-8 py-24 text-center md:py-32">
       <h1 className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
@@ -20,14 +23,14 @@ export default function Hero() {
       </p>
       <Button
         size="lg"
-        className="cursor-pointer relative z-10"
-        onClick={() => {
-          alert("JHekk");
-        }}
+        className="cursor-pointer relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border-0"
+        onClick={() => setIsModalOpen(true)}
       >
         Track Your Profile
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
+
+      <ConnectModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }

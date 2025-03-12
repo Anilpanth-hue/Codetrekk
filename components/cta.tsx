@@ -29,7 +29,7 @@ export default function CTA() {
             <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                className="cursor-pointer relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border-0"
               >
                 Get Your Trek Card <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

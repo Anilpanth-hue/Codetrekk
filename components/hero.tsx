@@ -12,7 +12,7 @@ export default function Hero() {
     <section className="relative bg-gradient-to-b from-background to-background/80 container flex min-h-[calc(100vh-3.5rem)] max-w-screen-2xl flex-col items-center justify-center space-y-8 py-24 text-center md:py-32">
       <h1 className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
         LeveL UP YouR CodinG JourneY With{" "}
-        <span className="text-primary">CodeTreK</span>
+        <span className="text-purple-500">CodeTreK</span>
       </h1>
       <p className="mx-auto max-w-[42rem] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
         <span className="text-orange-500 font-bold">CODE</span>

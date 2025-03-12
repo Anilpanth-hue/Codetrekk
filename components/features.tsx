@@ -98,7 +98,7 @@ export default function Features() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-bold text-4xl leading-tight md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+            <h2 className="font-bold text-4xl leading-tight md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80 ">
               Elevate YouR CodinG JourneY
             </h2>
             <p className="mt-4 text-xl text-muted-foreground">
@@ -402,7 +402,7 @@ export default function Features() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 viewport={{ once: true }}
                 className={`group cursor-pointer rounded-xl border bg-background p-6 shadow-sm transition-all duration-200 hover:shadow-md ${
-                  activeIndex === index ? "ring-2 ring-primary/50" : ""
+                  activeIndex === index ? "ring-2 ring-yellow/50" : ""
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
@@ -415,7 +415,7 @@ export default function Features() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   {platform.description}
                 </p>
-                <div className="mt-4 flex items-center text-sm font-medium text-primary">
+                <div className="mt-4 flex items-center text-sm font-medium text-yellow-500">
                   <span>Explore integration</span>
                   <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>

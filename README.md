@@ -15,7 +15,7 @@ CodeTrek is a platform designed to help developers track and visualize their cod
 
 - **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB
+- **Database**: MongoDB, or can use clerk
 - **Additional Tools**: Chart.js, Axios
 
 ## 🚀 Getting Started

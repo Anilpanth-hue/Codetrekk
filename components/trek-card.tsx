@@ -35,7 +35,6 @@ interface TrekCardProps {
 export default function TrekCard({
   name = "Anil Panth",
   username = "anilcode",
-  avatarUrl = anillogo,
   bio = "Full-stack developer passionate about algorithms and problem solving",
   platforms = [
     {

@@ -53,6 +53,7 @@ export default function ProfileTrackerPage() {
   const [email, setEmail] = useState("");
   const [activeTab, setActiveTab] = useState("overview");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [stats, setStats] = useState({
     totalQuestions: 266,
     totalActiveDays: 128,
@@ -125,7 +126,7 @@ export default function ProfileTrackerPage() {
       <div className="container mx-auto py-8 px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-white">Code Trek</h1>
+            <h1 className="text-3xl font-bold text-white">CodeTrek</h1>
             <p className="text-gray-400">
               Track your coding journey across multiple platforms
             </p>
@@ -180,13 +181,20 @@ export default function ProfileTrackerPage() {
 
             <CardHeader className="flex flex-col items-center text-center pt-14">
               <CardTitle className="text-xl font-bold">
-                Developer Profile
+                Developer Portfolio
               </CardTitle>
               <CardDescription className="text-gray-400">
                 {email}
               </CardDescription>
 
-              <div className="flex gap-2 mt-4">
+              <button
+                className="text-xl font-bold bg-slate-700"
+                onClick={() => router.push("/trek-card")}
+              >
+                Get Your Treky Card
+              </button>
+
+              {/* <div className="flex gap-2 mt-4">
                 {platforms.map((platform) => (
                   <Badge
                     key={platform.id}
@@ -205,7 +213,7 @@ export default function ProfileTrackerPage() {
                     <span className="ml-1">{platform.name}</span>
                   </Badge>
                 ))}
-              </div>
+              </div> */}
             </CardHeader>
 
             <CardContent>

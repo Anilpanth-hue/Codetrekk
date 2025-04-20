@@ -4,9 +4,24 @@ import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConnectModal } from "@/components/profile/connect-modal";
+import { useAuth } from "@/components/auth-provider";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const auth = useAuth();
+  const user = auth?.user;
+  const router = useRouter();
+
+  const handleTrackProfile = () => {
+    if (!user) {
+      // Redirect to login if user is not authenticated
+      router.push("/auth/login");
+    } else {
+      // Open the connect modal if user is authenticated
+      setIsModalOpen(true);
+    }
+  };
 
   return (
     <section className="relative bg-gradient-to-b from-background to-background/80 container flex min-h-[calc(100vh-3.5rem)] max-w-screen-2xl flex-col items-center justify-center space-y-8 py-24 text-center md:py-32">
@@ -24,7 +39,7 @@ export default function Hero() {
       <Button
         size="lg"
         className="cursor-pointer relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border-0"
-        onClick={() => setIsModalOpen(true)}
+        onClick={handleTrackProfile}
       >
         Track Your Profile
         <ArrowRight className="ml-2 h-4 w-4" />
